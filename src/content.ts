@@ -1,15 +1,20 @@
-// Edit artwork, copy, links and images here, without touching layout components.
-export type Category = 'painting' | 'blacklight' | 'mural' | 'sketchbook'
+// Anna's artworks and artist copy. Names are temporary working labels until she approves them.
+export type Category = 'painting' | 'blacklight' | 'mural' | 'other' | 'sketchbook'
 export type Artwork = {
   id: string
-  title: string // Working titles until Anna approves the real names.
+  title: string
   category: Category
   image: string
+  thumb?: string
   alt: string
   medium?: string
   year?: string
   description?: string
   featured?: boolean
+  /** Alternate photo of the same physical artwork, e.g. daylight versus UV. */
+  alternateImage?: string
+  alternateLabel?: string
+  primaryLabel?: string
 }
 
 export const artist = {
@@ -19,19 +24,47 @@ export const artist = {
   tagline: 'Imagination has a habit of wandering off the page.',
   introduction: 'A growing collection of paintings, sketchbook creatures, unexpected colors, and unfinished ideas worth keeping.',
   about: 'I make art to follow ideas wherever they go. Sometimes they become paintings. Sometimes they stay as tiny creatures living in the margins of a sketchbook.',
-  contactEmail: '', // Set Anna's preferred email to enable the contact link.
-  instagram: '', // Set a full URL if Anna wants to add Instagram.
+  contactEmail: '',
+  instagram: '',
 }
 
+/** Anna's complete gallery from AnnaPortfolioArt.zip, including the HEIC painting converted
+ * into a browser-friendly image. Two behind-the-scenes photos appear on Meet Anna instead;
+ * the duplicate horned-girl JPG and Paint.NET work file are intentionally omitted.
+ * The fourth blacklight painting's daylight photo is available via the lightbox switch.
+ */
 export const art: Artwork[] = [
-  { id:'electric-1',title:'Electric Daydream',category:'blacklight',image:'/art/BlackLightWoman1.webp',alt:'Expressive fluorescent blacklight painting by Anna',medium:'Blacklight painting',featured:true },
-  { id:'rose',title:'In Full Color',category:'painting',image:'/art/WomanPinkOrange.webp',alt:'Expressive portrait in pink and orange by Anna',medium:'Painting',featured:true },
-  { id:'arabian',title:'Somewhere Else',category:'painting',image:'/art/ArabianWoman.webp',alt:'Colorful atmospheric painting by Anna',medium:'Painting',featured:true },
-  { id:'electric-2',title:'After Dark',category:'blacklight',image:'/art/BlackLightWoman2.webp',alt:'Neon fluorescent figure painting by Anna',medium:'Blacklight painting' },
-  { id:'clouds',title:'Cloud Study',category:'painting',image:'/art/WomanInClouds.webp',alt:'Dreamlike atmospheric portrait by Anna',medium:'Painting' },
-  { id:'green-red',title:'Color & Feeling',category:'painting',image:'/art/WomanGreenRed.webp',alt:'Colorful expressive painting by Anna',medium:'Painting' },
-  { id:'blue-flowers',title:'Growing',category:'mural',image:'/art/WallBlueFlowers_Grow.webp',alt:'Floral wall artwork by Anna',medium:'Wall painting' },
-  { id:'jungle',title:'The Other Side of the Page',category:'sketchbook',image:'/art/Sketchbook_JungleCaveManScene.webp',alt:'Detailed imaginative sketchbook scene by Anna',medium:'Sketchbook illustration' },
+  {id:'electric-1',title:'Electric Daydream',category:'blacklight',image:'/art/BlackLightWoman1.webp',thumb:'/art/BlackLightWoman1-thumb.webp',alt:'Silhouette framed by purple, pink, and blue fluorescent brushstrokes',medium:'Blacklight painting',featured:true},
+  {id:'rose',title:'In Full Color',category:'painting',image:'/art/WomanPinkOrange.webp',thumb:'/art/WomanPinkOrange-thumb.webp',alt:'Abstract colorful portrait with pink and orange brushwork',medium:'Painting',featured:true},
+  {id:'arabian',title:'Somewhere Else',category:'painting',image:'/art/ArabianWoman.webp',thumb:'/art/ArabianWoman-thumb.webp',alt:'Warm red and orange moonlit scene with figures and palms',medium:'Painting',featured:true},
+  {id:'electric-2',title:'After Dark',category:'blacklight',image:'/art/BlackLightWoman2.webp',thumb:'/art/BlackLightWoman2-thumb.webp',alt:'Seated silhouette against vivid fluorescent strokes',medium:'Blacklight painting'},
+  {id:'clouds',title:'Cloud Study',category:'painting',image:'/art/WomanInClouds.webp',thumb:'/art/WomanInClouds-thumb.webp',alt:'Dreamlike female figure set against mottled stormy colors',medium:'Painting'},
+  {id:'green-red',title:'Color & Feeling',category:'painting',image:'/art/WomanGreenRed.webp',thumb:'/art/WomanGreenRed-thumb.webp',alt:'Portrait surrounded by green, rust and earth-toned marks',medium:'Painting'},
+  {id:'bad-girls',title:"Bad Girls Don't Cry",category:'painting',image:'/art/BadGirlsDontCry.webp',thumb:'/art/BadGirlsDontCry-thumb.webp',alt:'Painting of a blonde woman holding a wine glass with the handwritten words Bad Girls Don’t Cry',medium:'Painting'},
+  {id:'blue-flowers',title:'Growing',category:'mural',image:'/art/WallBlueFlowers_Grow.webp',thumb:'/art/WallBlueFlowers_Grow-thumb.webp',alt:'Blue flowers and handwritten word Grow painted on a wall',medium:'Wall painting'},
+  {id:'electric-3',title:'Neon Silhouette',category:'blacklight',image:'/art/blackLightWoman3.webp',thumb:'/art/blackLightWoman3-thumb.webp',alt:'Blacklight silhouette with raised arms and glowing brushstrokes',medium:'Blacklight painting'},
+  {id:'electric-4',title:'After the Lights Go Out',category:'blacklight',image:'/art/BlackLIghtWoman4.webp',thumb:'/art/BlackLIghtWoman4-thumb.webp',alt:'Fluorescent face with orange hair and vivid blue-green skin',medium:'Blacklight painting',primaryLabel:'Blacklight',alternateImage:'/art/BlackLightWoman4_daylight.webp',alternateLabel:'Daylight'},
+  {id:'blacklight-set',title:'The Glowing Collection',category:'blacklight',image:'/art/BlackLightWomenSet.webp',thumb:'/art/BlackLightWomenSet-thumb.webp',alt:'Three glowing blacklight silhouette paintings displayed side by side',medium:'Blacklight series'},
+  {id:'blue-eye',title:'Blue-Eyed Study',category:'other',image:'/art/BlueEyedWomanWatercolor.webp',thumb:'/art/BlueEyedWomanWatercolor-thumb.webp',alt:'Delicate side-profile illustration of a woman in watercolor',medium:'Watercolor'},
+  {id:'anime',title:'Anime Study',category:'other',image:'/art/AnimeGirl.webp',thumb:'/art/AnimeGirl-thumb.webp',alt:'Framed line drawing of an anime character',medium:'Illustration'},
+  {id:'wall-flowers',title:'Flowers on the Wall',category:'mural',image:'/art/WallFlowers1.webp',thumb:'/art/WallFlowers1-thumb.webp',alt:'Pink and green floral motif painted around a doorway',medium:'Wall mural'},
+  {id:'wall-face',title:'A Face on the Wall',category:'mural',image:'/art/WallMural.webp',thumb:'/art/WallMural-thumb.webp',alt:'Large expressive face with turquoise eyes painted on a wall',medium:'Wall mural'},
+  {id:'woman-crying',title:'The Hard Parts',category:'painting',image:'/art/WomanCrying.webp',thumb:'/art/WomanCrying-thumb.webp',alt:'Portrait of a woman in blue with text and a red rose',medium:'Painting'},
+  {id:'woman-crying-2',title:'Blue Tears',category:'painting',image:'/art/WomanCrying2.webp',thumb:'/art/WomanCrying2-thumb.webp',alt:'Moody portrait of a woman with tears down her cheek',medium:'Painting'},
+  {id:'woman-red',title:'Woman in Red',category:'painting',image:'/art/WomanInRed.webp',thumb:'/art/WomanInRed-thumb.webp',alt:'Figure seated against long vertical red lines',medium:'Painting'},
+  {id:'waterfall',title:'Into the Waterfall',category:'painting',image:'/art/WomanInWaterfall.webp',thumb:'/art/WomanInWaterfall-thumb.webp',alt:'Expressive painting of a woman beside a rushing waterfall',medium:'Painting'},
+  {id:'chalkboard',title:'Drawn in Chalk',category:'other',image:'/art/ChalkboardDrawing.webp',thumb:'/art/ChalkboardDrawing-thumb.webp',alt:'Colorful portrait and flowers illustrated on a chalkboard',medium:'Chalk art'},
+  {id:'mushrooms',title:"Don't Trip",category:'other',image:'/art/DontTripMushrooms.webp',thumb:'/art/DontTripMushrooms-thumb.webp',alt:'Playful lettering and mushroom illustration on a multicolor background',medium:'Illustration'},
+  {id:'woodburn',title:'Woodburned Portrait',category:'other',image:'/art/Face_WoodBurning.webp',thumb:'/art/Face_WoodBurning-thumb.webp',alt:'Portrait burned into wood',medium:'Woodburning'},
+  {id:'hawaiian-flowers',title:'Hawaiian Flowers',category:'painting',image:'/art/HawaiianFlowers.webp',thumb:'/art/HawaiianFlowers-thumb.webp',alt:'Rust-orange tropical flowers and heart motifs on green',medium:'Painting'},
+  {id:'horned',title:'The Girl Who Escaped',category:'other',image:'/art/HornedGirl._trans.webp',thumb:'/art/HornedGirl._trans-thumb.webp',alt:'Anna’s smiling illustrated girl with pink horns',medium:'Character illustration'},
+  {id:'leg-tattoo',title:'Roses in Color',category:'other',image:'/art/LegTattoo.webp',thumb:'/art/LegTattoo-thumb.webp',alt:'Brightly colored floral tattoo artwork',medium:'Tattoo art'},
+  {id:'purple-flower',title:'Purple Bloom',category:'painting',image:'/art/PurpleFlower.webp',thumb:'/art/PurpleFlower-thumb.webp',alt:'Loose purple flower with watercolor-like petals',medium:'Painting'},
+  {id:'purple-wall',title:'Flowers on Drywall',category:'mural',image:'/art/PurpleFlowers_drywall.webp',thumb:'/art/PurpleFlowers_drywall-thumb.webp',alt:'Purple and blue flowers painted on a dark wall',medium:'Wall painting'},
+  {id:'rose-tattoo',title:'Rose Tattoo',category:'other',image:'/art/RoseTattoo1.webp',thumb:'/art/RoseTattoo1-thumb.webp',alt:'Close-up of a colorful rose tattoo',medium:'Tattoo art'},
+  {id:'sea-woman',title:'Sea Woman',category:'other',image:'/art/SeaWoman.webp',thumb:'/art/SeaWoman-thumb.webp',alt:'Brightly colored drawing of a woman surrounded by swirling shapes',medium:'Mixed media'},
+  // A full-page sketchbook illustration used in the Home feature, not duplicated in Work.
+  {id:'jungle',title:'The Other Side of the Page',category:'sketchbook',image:'/art/Sketchbook_JungleCaveManScene.webp',alt:'Intricate sketchbook illustration of fantastical figures',medium:'Sketchbook illustration'},
 ]
 
 // Ink-only files are generated from Anna's drawings. Replace or add as you batch-process.
@@ -40,4 +73,12 @@ export const doodles = {
   girl:'/sketches/Sketchbook_LegWarmerGirlCutout_ink_only.png',
   creature:'/sketches/Sketchbook_MouseEarsMonsterwithTennisShoesCutout_ink_only.png',
   iceCream:'/art/Sketchbook_IceCreamCutout.webp',
+  mascot:'/sketches/horned-girl.png',
+  cat:'/sketches/feeling-good-cat.png',
+  snail:'/sketches/snail.png',
+  smallHead:'/sketches/head-out-of-ground.png',
+  eye:'/sketches/still-loved-eye.png',
+  sourceCat:'/sketches/source-feeling-good-cat.png',
+  sourceFaces:'/sketches/source-faces-and-eyes.png',
+  sourceCouple:'/sketches/source-couple-and-pack.png',
 }

@@ -1,0 +1,34 @@
+OUT OF THE MARGINS — V5 UPDATE
+================================
+
+For an existing V4 installation:
+1. Make a backup or commit your local work.
+2. Extract out-of-the-margins-v5-update.zip into the ROOT of your existing React project (the directory containing package.json).
+3. Allow src/ files to be replaced; the ZIP does not overwrite your existing gallery paintings.
+4. Run: npm run build
+5. Run: npm run dev
+6. Visit Sketchbook, open the cover, turn pages, close, and choose View all pages & characters.
+
+WHAT CHANGED
+- Sketchbook: cover is visible above the fold on most desktop sizes, with bigger lettering and artwork and an Open button in the bottom-right.
+- Opening the book gives it a nearly full-screen reading space. The existing page-turning animation stays. Close returns to the cover.
+- Removed repeating page-header text. Kept white page margins and page numbers.
+- A dedicated alternate grid view shows Full pages and Characters & details. Both can be enlarged. Full pages have an Open in book action.
+- The book now contains ONLY files whose supplied names start with FullPage_. The detail gallery includes both FullPage_ and CutOut_ images.
+- Set 3 and prior supplied batches are included in the new collections: 19 full pages, 22 cutouts.
+- Work gallery has subtle illumination and suspended-artwork shadows, with a more dramatic lightbox.
+- Navigation uses Meet Anna and larger art by anna branding. About title is one line on desktop.
+- Home/intro labels and several doodle placements refined. Duplicate snail appearances reduced.
+
+PAGE ORDER / FUTURE UPDATES
+- Edit src/sketchbookPages.ts to reorder the sketchPages array: entries 1+2, 3+4 etc are facing spreads.
+- sketchCutouts is the detail gallery's separate cutout collection.
+- Current sequence is based on the order of the three supplied ZIPs. It is NOT the final curated sequence.
+- Future corrected/cropped versions can replace current paths and be reordered in the manifest.
+- The supplied originals were copied as PNG, without resizing/re-encoding.
+- File FullPageDogWithBee_transparent.png does not start with the literal "FullPage_" prefix and therefore is not in V5 book/grid. If it belongs, rename/import it with the agreed prefix in the next batch.
+- Legacy V4 archive images are not referenced by this version. They may remain in public/book until cleaned up; nothing depends on them.
+
+NOTE
+- Syntax and asset references checked in this environment. Full npm build could not be run because registry.npmjs.org is unreachable here; your local npm run build is the final validation.
+- This is an update ZIP, not a replacement of the entire repo. No GitHub/Render changes have been made.

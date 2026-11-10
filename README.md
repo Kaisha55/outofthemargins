@@ -1,59 +1,31 @@
-# Out of the Margins — Art by Anna
+# Out of the Margins — Art by Anna (V6)
 
-A React + Vite + TypeScript art-portfolio starter built with Anna's actual uploaded artwork. **No backend or hosting configuration required.**
+A React + Vite + TypeScript portfolio featuring Anna's original artwork.
 
-## Start locally
+## Install V6 over your V5 checkout
 
-Requires Node.js 20.19+ or 22.12+ (Vite 7).
+Extract this ZIP into your existing Out of the Margins project folder and allow files to be overwritten. Keep your existing Git repository (`.git/` is not included). The ZIP includes all source files and the current artwork assets, so it can also serve as a standalone source checkout after installing npm dependencies.
 
 ```powershell
 npm install
+npm run build
 npm run dev
 ```
 
-Open the URL Vite prints (usually `http://localhost:5173`). Do **not** double-click `index.html`; this is a React application and needs the Vite dev server.
+Open the local URL printed by Vite; commit/push only after reviewing the site. No automatic GitHub/Render changes are made.
 
-For a deployable build:
+## V6 changes
 
-```powershell
-npm run build
-npm run preview
-```
+- **The Work:** 29 gallery entries, including the newly added **Bad Girls Don't Cry** painting (converted to browser-friendly WebP from Anna's original HEIC). All distinct gallery artworks from `AnnaPortfolioArt.zip` are included. Each card has an optimized thumbnail and an enlarged view. One UV artwork supports a **Blacklight / Daylight** image toggle. Working titles/descriptions may be changed later by Anna in `src/content.ts`.
+- **Sketchbook:** all **23 cleaned `FullPage_` originals** from `FullPage_CompleteSet(2).zip` in `public/book/pages`. Reader preserves 3D page turns and scales each page with `object-fit: contain`, avoiding cut-off edges. The grid also includes all 56 extracted doodle characters. Image order is controlled by `src/sketchbookPages.ts`.
+- **Meet Anna:** layered studio-wall cards, including the two photos of Anna working on art. Biography is placeholder text until Anna provides her own.
+- **Home:** deliberate doodle placements, a larger framed sketchbook illustration, a visible sketchbook CTA, and colored drawings in the dark closing section.
+- **Sketchbook detail gallery:** more separation between white drawings and the lavender wall; repetitive character captions removed.
 
-## What's included
+## Asset provenance and notes
 
-- **Home**: original sketchbook-inspired hero with playful floating drawings and a scroll-controlled paper-to-color reveal.
-- **The Work**: artwork gallery with category filters and click-to-enlarge lightbox.
-- **About**: provisional introduction and an expressive mixed-art layout.
-- **Responsive styles**, keyboard-focus styles, Escape-to-close lightbox, and reduced-motion accommodations.
-- Working titles and bio are **placeholders**, not Anna's approved titles or statements.
+The supplied `.pdn` source file and duplicate horned-girl JPG are not displayed. The two photos of Anna working are on **Meet Anna**, not in the art grid. The converted HEIC file is included only as optimized WebP in `public/art/`; original files inside the uploaded ZIPs remain untouched.
 
-## Swapping in your new transparent images
+The entire repository can be built locally with Node 22 and `npm run build`. This update passed an asset-reference and source-syntax check in the preparation environment, but **a full npm production build was not available there**. Please run the local build before committing.
 
-Put the processed PNGs in `public/sketches/`. Open `src/content.ts` and update `doodles` to the new filenames. For instance:
-
-```ts
-gown: '/sketches/Sketchbook_BallroomGownWomanCutout_transparent.png',
-```
-
-Note: transparent **line art** keeps only ink, so enclosed white spaces also become transparent. If you prefer paper/white fills on some characters, keep those as alternate assets and choose per scene.
-
-You can add new paintings to `public/art/` and to the `art` array in `src/content.ts`. Set `featured: true` for home-page features; categories control the gallery filters.
-
-## Before public release
-
-- Confirm artwork titles, biography, descriptions, and alt text with Anna.
-- Add her contact method in `src/content.ts` (currently blank on purpose).
-- Review the illustration crop/hover effects on your own screen, particularly mobile.
-- Check image rights/consent for any artwork whose subject or collaborators require it.
-- The layout is a foundation: no accounts, shopping cart, payments, or CMS.
-
-## Project structure
-
-```
-src/App.tsx        Layout and views
-src/content.ts    All artwork data, artist copy, and doodle paths
-src/styles.css    Visual system, animation, responsive styling
-public/art/       Artwork assets (optimized copies)
-public/sketches/  Transparent sketch illustration assets
-```
+No images or copy have been approved by Anna yet; working artwork titles and artist statement are provisional.

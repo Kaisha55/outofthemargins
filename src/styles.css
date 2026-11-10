@@ -2,3 +2,374 @@
 @media(max-width:900px){.opening{height:155vh;min-height:780px}.site-nav{height:72px;padding:0 24px}.site-nav nav{gap:14px;margin-right:0}.nav-cta{display:none}.hero-content{top:30%;left:8%;max-width:70%}.hero-content h1{font-size:clamp(4.5rem,10vw,7rem)}.doodle-gown{top:19%;right:4%;height:42vh;opacity:.8}.doodle-girl{height:28vh}.doodle-creature{height:20vh}.section-inner{width:min(100% - 44px,1220px)}.sketch-layout{gap:8%}.featured,.sketch-section{padding:90px 0}.about-layout{gap:6%}}
 @media(max-width:640px){.site-nav{height:65px;padding:0 17px}.brand{font-size:1.5rem}.site-nav nav{gap:13px}.site-nav nav button{font-size:.61rem;letter-spacing:.02em}.opening{height:150vh;min-height:850px}.hero-content{top:28%;left:7%;max-width:89%}.hero-content h1{font-size:clamp(4rem,14vw,6rem);margin-bottom:24px}.hero-content>p:not(.eyebrow){max-width:210px;font-size:.87rem}.hero-content .eyebrow{font-size:.58rem}.doodle-gown{height:29vh;top:13%;right:-6%;max-width:50vw;opacity:.85}.doodle-girl{height:22vh;right:-5%;bottom:5%}.doodle-creature{height:17vh;left:0;bottom:7%}.hand-note-top{top:12%;left:12%;right:auto;font-size:.73rem}.scroll-hint{font-size:.55rem;bottom:3%;white-space:nowrap}.reveal-caption{left:8%;top:32%}.reveal-caption h2{font-size:clamp(3.9rem,13vw,7rem)}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.art-tile:nth-child(n){margin-top:0}.art-tile:nth-child(even){margin-top:36px}.art-image{aspect-ratio:3/4}.tile-info strong{font-size:1.05rem}.tile-info small{font-size:.7rem}.section-heading h2,.sketch-section h2{font-size:3.5rem}.sketch-layout,.about-layout{grid-template-columns:1fr;gap:50px}.sketch-photo{width:85%;margin:0 auto}.closing-section{padding:95px 20px}.closing-section h2{font-size:4rem}.work-page,.about-page{padding:115px 0 80px}.work-page h1{font-size:4rem}.filters{margin:42px 0 45px}.filters button{font-size:.75rem;padding:9px 13px}.about-art{max-width:85%;margin:0 auto}.lightbox{display:flex;flex-direction:column;gap:16px;max-height:90vh;overflow:auto}.lightbox>img{max-height:60vh}.lightbox-close{position:fixed;top:20px;right:20px}.lightbox-caption h3{font-size:2rem}.site-footer{flex-direction:column;text-align:center}.view-label{display:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}.paper-sheet,.hero-content,.floating-doodle,.reveal-caption{transform:none!important}.paper-sheet{display:none}.hero-content,.floating-doodle{opacity:1!important}.hero-content{background:#e9e0cde9;padding:18px}.scroll-hint{display:none}}
+
+
+/* ===== THE GREAT SKETCHBOOK ESCAPE (V2) ===== */
+.opening-v2{height:215svh;min-height:1150px;background:#18131f}
+.opening-v2 .opening-sticky{height:100svh;min-height:560px;overflow:hidden}
+.opening-v2 .paint-underneath{background:#110d1c}
+.opening-v2 .paint-underneath>img{opacity:.86;filter:saturate(1.15) contrast(1.05);transform:scale(calc(1.07 + var(--open)*.06))}
+.opening-v2 .paint-underneath:after{background:linear-gradient(90deg,#100b1ce8 0%,#181123c2 39%,#130f2090 100%)}
+.opening-v2 .reveal-caption{top:24%;left:8%;max-width:44%;opacity:var(--color-reveal);transform:translate3d(0,calc((1 - var(--color-reveal))*48px),0);z-index:2}
+.opening-v2 .reveal-caption h2{font-size:clamp(4.9rem,8.5vw,10rem);margin:22px 0 18px}
+.opening-v2 .reveal-caption-copy{font-size:1.02rem;line-height:1.6;max-width:365px;color:#f2dcdc;margin-bottom:32px}
+.opening-v2 .opening-paper{position:absolute;top:-3%;height:106%;width:52.2%;z-index:4;overflow:hidden;will-change:transform;box-shadow:0 12px 36px #120c2240}
+.opening-v2 .opening-paper-left{left:-1.6%;background:#f3e9d7;transform-origin:left center;transform:translate3d(calc(var(--open)*-110%),0,0) rotate(calc(var(--open)*-5deg));border-right:1px solid #b7a3a079}
+.opening-v2 .opening-paper-right{right:-1.6%;background:#ece1d0;transform-origin:right center;transform:translate3d(calc(var(--open)*110%),0,0) rotate(calc(var(--open)*6deg));border-left:1px solid #b7a3a071}
+.opening-v2 .paper-grain{position:absolute;inset:0;opacity:.64;background:repeating-linear-gradient(0deg,transparent 0 36px,#927b7f1a 37px 38px);pointer-events:none}
+.opening-v2 .paper-source{position:absolute;display:block;object-fit:contain;filter:contrast(1.12);pointer-events:none;mix-blend-mode:multiply}
+.opening-v2 .paper-source-left{width:39%;left:0%;top:16%;opacity:.22;transform:rotate(-7deg)}
+.opening-v2 .paper-source-right{width:76%;right:-14%;top:15%;opacity:.25;transform:rotate(6deg)}
+.opening-v2 .page-corner-note{position:absolute;left:9%;bottom:13%;color:#975674;font:1rem 'Permanent Marker',cursive;transform:rotate(-8deg);letter-spacing:.04em;opacity:.8}
+.opening-v2 .page-corner-note span{color:#b05478}
+.opening-v2 .page-number{position:absolute;right:12%;bottom:7%;font:.69rem 'DM Sans',sans-serif;letter-spacing:.2em;color:#7b6671}
+.opening-v2 .paper-fold{position:absolute;left:0;top:0;height:100%;width:2px;background:#8e657440}
+.opening-v2 .hero-content-v2{z-index:8;top:18%;left:9%;max-width:68%;width:fit-content;opacity:clamp(0,calc(1 - var(--word-exit)*1.45),1);transform:translate3d(calc(var(--word-exit)*-63vw),calc(var(--word-exit)*-7vh),0);will-change:transform,opacity}
+.opening-v2 .hero-content-v2 .eyebrow{color:#8b4a67;letter-spacing:.25em}
+.opening-v2 .hero-content-v2 h1{margin:22px 0 12px;font-size:clamp(5.6rem,10.7vw,11.7rem);line-height:.80;letter-spacing:-.06em}
+.opening-v2 .hero-content-v2 h1 .hero-line{display:block;white-space:nowrap}
+.opening-v2 .hero-content-v2 h1 .hero-line-the{font-style:italic;font-size:.88em;margin:0 0 .08em .10em;color:#b05a7a}
+.opening-v2 .hero-content-v2 h1 .hero-line-margins{color:#823f5d}
+.opening-v2 .hero-content-v2 .period{color:#d7838a}
+.opening-v2 .hero-content-v2>p:not(.eyebrow){max-width:300px;margin:24px 0 22px}
+/* Artwork overlaps the MARGINS lettering at rest, then lingers as the paper leaves slide away. */
+.opening-v2 .mascot-escape{position:absolute;z-index:11;right:1%;top:10%;height:min(80svh,840px);width:min(43vw,655px);max-width:53%;pointer-events:auto;transform-origin:75% 60%;transform:translate3d(calc(var(--escape)*17vw),calc(var(--escape)*-7vh),0) rotate(calc(var(--escape)*9deg)) scale(calc(1 - var(--escape)*.26));will-change:transform;filter:drop-shadow(10px 13px 5px #23132638)}
+.opening-v2 .mascot-escape img{width:100%;height:100%;object-fit:contain;object-position:bottom center;transition:transform .35s ease;transform-origin:60% 45%}
+.opening-v2 .mascot-escape:hover img{transform:rotate(-3deg) translateY(-8px) scale(1.035)}
+.opening-v2 .mascot-note{position:absolute;z-index:12;top:13%;right:9%;font-family:'Permanent Marker',cursive;color:#9a516c;font-size:clamp(.9rem,1.2vw,1.2rem);rotate:9deg;opacity:clamp(0,calc(1 - var(--open)*3),1);pointer-events:none}
+.opening-v2 .escape-doodle{position:absolute;z-index:12;object-fit:contain;will-change:transform,opacity;filter:drop-shadow(5px 8px 4px #22111d24);pointer-events:none}
+.opening-v2 .escape-cat{width:clamp(95px,14vw,200px);right:26%;bottom:-2%;opacity:clamp(0,calc((var(--progress) - .22)*4),1);transform:translate3d(calc(var(--escape)*-5vw),calc(var(--escape)*-18vh),0) rotate(calc(var(--escape)*-18deg))}
+.opening-v2 .escape-snail{width:clamp(90px,10vw,155px);left:12%;bottom:8%;opacity:clamp(0,calc((var(--progress) - .12)*4),1);transform:translate3d(calc(var(--escape)*-10vw),calc(var(--escape)*-12vh),0) rotate(calc(var(--escape)*-7deg))}
+.opening-v2 .escape-head{width:clamp(70px,8vw,125px);right:6%;bottom:15%;opacity:clamp(0,calc((var(--progress) - .28)*4),1);transform:translate3d(calc(var(--escape)*-13vw),calc(var(--escape)*-22vh),0) rotate(calc(var(--escape)*-10deg))}
+.opening-v2 .scroll-hint{bottom:4%;left:48%;z-index:20;color:#5e4652;opacity:clamp(0,calc(1 - var(--open)*4),1)}
+/* Put the mascot into the site identity as well, without replacing its actual source image. */
+@media(max-width:1000px){
+ .opening-v2 .hero-content-v2{top:23%;left:7%;max-width:80%}
+ .opening-v2 .hero-content-v2 h1{font-size:clamp(5rem,11vw,8rem)}
+ .opening-v2 .mascot-escape{width:min(50vw,550px);height:75svh;right:-4%;top:17%}
+ .opening-v2 .reveal-caption{max-width:60%;top:28%}
+ .opening-v2 .reveal-caption h2{font-size:clamp(4.7rem,9vw,8rem)}
+}
+@media(max-width:640px){
+ .opening-v2{height:185svh;min-height:880px}
+ .opening-v2 .opening-sticky{min-height:500px}
+ .opening-v2 .hero-content-v2{top:20%;left:6%;max-width:90%}
+ .opening-v2 .hero-content-v2 h1{font-size:clamp(4rem,13vw,5.5rem);line-height:.84;margin-top:17px}
+ .opening-v2 .hero-content-v2 .eyebrow{font-size:.55rem;max-width:220px}
+ .opening-v2 .hero-content-v2>p:not(.eyebrow){font-size:.79rem;max-width:180px;margin-top:20px;line-height:1.4}
+ .opening-v2 .hero-content-v2 .scribble-button{font-size:.7rem;padding:12px 14px;gap:15px}
+ .opening-v2 .mascot-escape{right:-17%;top:28%;width:76vw;max-width:none;height:64svh}
+ .opening-v2 .mascot-note{top:16%;right:12%;font-size:.83rem}
+ .opening-v2 .paper-source-left{width:68%;left:-20%;top:16%}
+ .opening-v2 .paper-source-right{width:100%;right:-32%;top:31%}
+ .opening-v2 .reveal-caption{left:7%;top:21%;max-width:80%}
+ .opening-v2 .reveal-caption h2{font-size:clamp(3.7rem,12.5vw,6rem)}
+ .opening-v2 .reveal-caption-copy{max-width:220px;font-size:.84rem}
+ .opening-v2 .escape-cat{right:30%;width:110px}
+ .opening-v2 .escape-head{width:75px}
+ .opening-v2 .escape-snail{width:75px}
+ .opening-v2 .scroll-hint{left:50%;bottom:3%;font-size:.55rem;white-space:nowrap}
+}
+@media(prefers-reduced-motion:reduce){
+ .opening-v2{height:100svh;min-height:690px}
+ .opening-v2 .opening-paper{transform:none!important}
+ .opening-v2 .paint-underneath{display:none}
+ .opening-v2 .hero-content-v2{transform:none!important;opacity:1!important;background:none;padding:0}
+ .opening-v2 .mascot-escape{transform:none!important}
+ .opening-v2 .mascot-escape img{transition:none}
+ .opening-v2 .escape-doodle{display:none}
+ .opening-v2 .scroll-hint{display:none}
+}
+
+/* V2 final placement pass: the mascot must truly cross the edge of the headline. */
+@media (min-width:1001px) {
+  .opening-v2 .mascot-escape { right:30%; }
+}
+@media (min-width:641px) and (max-width:1000px) {
+  .opening-v2 .mascot-escape { right:10%; }
+}
+@media (max-width:640px) {
+  .opening-v2 .mascot-escape { right:-5%;top:25%;pointer-events:none; }
+  .opening-v2 .mascot-escape img { object-position:center top; }
+}
+.opening-v2 .escape-doodle { filter: brightness(0) invert(calc(var(--open)*.95)) drop-shadow(4px 6px 3px #21132645); }
+
+/* ======================================================
+   V3 — THE DRAWINGS KEEP ESCAPING
+   Everything below refines V2 rather than replacing it.
+   ====================================================== */
+
+/* Identity + navigation: light-on-dark for Work, visible hover on every view. */
+.site-nav .brand{font-size:1.64rem;letter-spacing:-.055em;white-space:nowrap;color:inherit;transition:color .2s ease,transform .2s ease}
+.site-nav .brand-prefix{font-family:'DM Sans',sans-serif;font-size:.64rem;font-weight:700;letter-spacing:.01em;vertical-align:middle;margin-right:3px}
+.site-nav .brand:hover{color:#ad5275;transform:translateY(-1px)}
+.site-nav nav button{transition:color .2s ease,border-color .2s ease,background-color .2s ease}
+.site-nav nav button:hover{color:#aa4a6c;border-bottom-color:#aa4a6c}
+.site-nav .nav-cta{transition:color .2s ease,background .2s ease,border-color .2s ease,transform .2s ease}
+.site-nav .nav-cta:hover{transform:translateY(-2px)}
+.site-nav-dark{color:#faf0e7;border-color:#d3b8c42f}
+.site-nav-dark .brand{color:#f8ebe3}
+.site-nav-dark .brand:hover{color:#f5b2bd}
+.site-nav-dark nav button{color:#f1e4e8}
+.site-nav-dark nav button:hover{color:#ffc2c9;border-bottom-color:#ffc2c9}
+.site-nav-dark nav button.active{color:#ffc0cc;border-bottom-color:#ffc0cc}
+.site-nav-dark .nav-cta{color:#f8ebe3;border-color:#f8e9e3a0}
+.site-nav-dark .nav-cta:hover{background:#f8e9e3;color:#241725;border-color:#f8e9e3}
+
+/* Handmade tear silhouettes at the inner edges of the two moving pages.
+   Slightly irregular tooth shapes suggest real torn paper instead of rectangles. */
+.opening-v2 .opening-paper{box-shadow:0 5px 25px #130b1d55;filter:drop-shadow(0px 5px 8px #0806127a)}
+.opening-v2 .opening-paper-left{
+  clip-path:polygon(0 0,100% 0,98.2% 4%,99.2% 9%,97.1% 13%,99.8% 18%,97.7% 23%,99.1% 27%,96.9% 32%,99.6% 37%,98.1% 42%,99.8% 47%,97.4% 52%,99.3% 57%,97.1% 63%,99.7% 68%,97.9% 73%,99.3% 78%,97.4% 84%,99.8% 90%,98% 95%,100% 100%,0 100%);
+  background:linear-gradient(90deg,#f1e8d7 0%,#f1e8d7 86%,#d9c5ba 100%);
+}
+.opening-v2 .opening-paper-right{
+  clip-path:polygon(0 0,100% 0,100% 100%,0 100%,2.2% 96%,.5% 91%,3.1% 86%,1% 81%,2.4% 76%,.2% 71%,2.9% 66%,.7% 61%,2.4% 55%,.2% 50%,2.8% 45%,.8% 40%,3.1% 35%,.9% 30%,2.5% 25%,.3% 19%,2.6% 14%,.8% 9%,2.1% 4%);
+  background:linear-gradient(90deg,#d3beb3 0%,#eee2d0 6%,#eee2d0 100%);
+}
+.opening-v2 .opening-paper-left::after,
+.opening-v2 .opening-paper-right::after{content:'';position:absolute;top:0;bottom:0;width:5%;pointer-events:none;opacity:.32}
+.opening-v2 .opening-paper-left::after{right:0;background:linear-gradient(90deg,transparent,#8e6867a8)}
+.opening-v2 .opening-paper-right::after{left:0;background:linear-gradient(90deg,#8e6867a8,transparent)}
+.opening-v2 .page-corner-note{top:12%;bottom:auto;left:5%;color:#9a5070;transform:rotate(-8deg);font-size:clamp(.75rem,1vw,1rem)}
+.opening-v2 .scroll-hint{left:10%;bottom:3%;transform:none;z-index:20;color:#5f4654;font-weight:700;max-width:175px;text-align:left;font-size:.67rem;line-height:1.4}
+.opening-v2 .scroll-hint span{font-size:1.9rem;line-height:1.1}
+
+/* Crisp white ink — never faded to grey as the colorful world is revealed. */
+.opening-v2 .hero-escapee{position:absolute;z-index:12;height:auto;max-height:38vh;object-fit:contain;pointer-events:none;user-select:none;
+  opacity:calc(var(--arrival) * var(--doodle-opacity));
+  filter:brightness(0) invert(1) drop-shadow(2px 3px 3px #14091f8a);
+  transform:translate3d(calc((1 - var(--arrival)) * var(--from-x)),calc((1 - var(--arrival)) * 55px),0) rotate(calc((1 - var(--arrival)) * var(--from-angle)));
+  will-change:opacity,transform;
+}
+/* Remove the old trio: the same actual Anna sketches are now in the config-driven roster. */
+.opening-v2 .escape-doodle{display:none}
+
+/* Decorative characters in the rest of Home and About. None in Work/gallery. */
+.ambient-host{position:relative;isolation:isolate;overflow:clip}
+.ambient-host > :not(.ambient-doodles){position:relative;z-index:2}
+.ambient-doodles{position:absolute;inset:0;z-index:1;pointer-events:none;user-select:none}
+.ambient-doodle{position:absolute;display:block;height:auto;opacity:0;
+  transform:translate3d(0,55px,0) rotate(calc(var(--angle) + 8deg)) scale(.93);
+  transition:opacity .85s ease var(--delay),transform 1.05s cubic-bezier(.2,.7,.2,1) var(--delay);
+  pointer-events:none;will-change:transform,opacity;
+}
+.ambient-doodle.is-visible{opacity:var(--doodle-opacity);transform:translate3d(0,0,0) rotate(var(--angle)) scale(1)}
+.ambient-doodle img{display:block;width:100%;height:auto;animation:little-doodle-float 6.5s ease-in-out infinite alternate;animation-delay:var(--delay)}
+.ambient-doodle.ink-light img{filter:brightness(0) invert(1) drop-shadow(1px 3px 2px #190e2299)}
+.ambient-doodle.ink-dark img{filter:brightness(0) drop-shadow(1px 3px 2px #150c1626)}
+@keyframes little-doodle-float{from{transform:translateY(0) rotate(-1deg)}to{transform:translateY(-9px) rotate(2deg)}}
+.featured.ambient-host > .section-inner{position:relative;z-index:2}
+.sketch-section.ambient-host > .section-inner{position:relative;z-index:2}
+.closing-section.ambient-host > :not(.ambient-doodles){position:relative;z-index:2}
+.about-page.ambient-host > .section-inner{position:relative;z-index:2}
+
+@media(max-width:900px){
+  .site-nav .brand{font-size:1.4rem}
+  .site-nav .brand-prefix{font-size:.57rem}
+  .opening-v2 .page-corner-note{top:12%;left:5%;font-size:.72rem}
+  .opening-v2 .scroll-hint{left:7%;bottom:2.5%;max-width:135px;font-size:.59rem}
+  .ambient-doodle{max-width:19vw}
+}
+@media(max-width:640px){
+  .site-nav{padding:0 14px}
+  .site-nav .brand{font-size:1.22rem}
+  .site-nav .brand-prefix{font-size:.48rem}
+  .site-nav nav{gap:10px}
+  .site-nav nav button{font-size:.6rem}
+  .opening-v2 .page-corner-note{top:11%;left:5%;font-size:.64rem}
+  .opening-v2 .scroll-hint{left:5%;bottom:2%;max-width:100px;font-size:.51rem;white-space:normal}
+  .opening-v2 .hero-escapee{max-height:23vh}
+  .opening-v2 .hero-escapee-hotdog,
+  .opening-v2 .hero-escapee-dog,
+  .opening-v2 .hero-escapee-x-eyes{display:none}
+  .ambient-doodle{max-width:22vw}
+  .sketch-section .ambient-doodle:nth-child(3),
+  .about-page .ambient-doodle:nth-child(4){display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .ambient-doodle{opacity:var(--doodle-opacity)!important;transform:none!important;transition:none!important;will-change:auto}
+  .ambient-doodle img{animation:none!important}
+  .opening-v2 .hero-escapee{display:none!important}
+  .opening-v2 .opening-paper{filter:none!important}
+}
+
+/* Behind the jagged seam, matching paper stops dark pinholes before the pages move. */
+.opening-v2 .paper-seam-backing{position:absolute;top:0;bottom:0;left:46%;width:8%;background:linear-gradient(90deg,#f1e8d7 0%,#eee2d0 100%);z-index:3;pointer-events:none;opacity:clamp(0,calc(1 - var(--open)*9),1)}
+@media(prefers-reduced-motion:reduce){.opening-v2 .paper-seam-backing{display:none}}
+/* Cover the torn perforations while the book is closed; reveal them only when it opens. */
+.opening-v2 .paper-seam-backing{z-index:5;left:47%;width:6%;background:linear-gradient(90deg,#f1e8d7 0%,#f1e8d7 47%,#dcc9bc 50%,#eee2d0 53%,#eee2d0 100%);opacity:clamp(0,calc(1 - var(--open)*10),1)}
+
+@media(min-width:901px){.opening-v2 .scroll-hint{max-width:none;white-space:nowrap}}
+/* Keep the painting reveal readable on phones: preserve the mascot, not the crowd. */
+@media(max-width:640px){
+  .opening-v2 .hero-escapee-eye{display:none}
+  .opening-v2 .mascot-escape{transform:translate3d(calc(var(--escape)*3vw),calc(var(--escape)*-2vh),0) rotate(calc(var(--escape)*4deg)) scale(calc(1 - var(--escape)*.20))}
+  .opening-v2 .reveal-caption h2{font-size:clamp(2.8rem,11.4vw,4.6rem)}
+}
+
+/* V5 polish: quiet spotlit gallery, larger purposeful art, and corrected labels. */
+.opening-v2 .scroll-hint{left:50%;bottom:1.4%;transform:translateX(-50%);text-align:center;max-width:none;white-space:nowrap;letter-spacing:.16em;font-size:.77rem}
+.opening-v2 .reveal-caption .eyebrow{font-size:clamp(.83rem,1.2vw,1.18rem);letter-spacing:.19em;color:#ffe3d9}
+.opening-v2 .reveal-caption{left:7%;max-width:48%}
+.opening-v2 .page-corner-note{top:9%;left:6%;font-size:clamp(.85rem,1.2vw,1.2rem)}
+.sketch-section .sketch-photo{background:#693e59;padding:21px 21px 52px;box-shadow:16px 18px 0 #a9899399,0 16px 40px #3e303044}
+.sketch-section .sketch-photo>span{color:#f3d9df;bottom:17px}
+.sketch-section .sketch-photo .sketch-sticker{right:-12%;bottom:auto;top:-17%;width:37%;filter:drop-shadow(5px 8px 6px #26182c80)}
+.sketch-section .sketch-photo>img:first-child{aspect-ratio:.9;object-fit:contain;background:#f6eee3}
+.closing-section{min-height:600px}
+.about-page .about-copy h1.about-one-line{font-size:clamp(3.7rem,7vw,8rem);white-space:nowrap;letter-spacing:-.065em}
+.about-page .about-floating{height:60%;right:-9%;bottom:-9%}
+.about-page .about-portrait{box-shadow:28px 29px 0 #a6577270,0 18px 40px #55324526}
+
+/* A dark exhibition wall with pools of light behind paintings—not a flat black screen. */
+.work-page{position:relative;isolation:isolate;background:radial-gradient(ellipse 36% 26% at 18% 24%,#6a3d5570 0%,transparent 100%),radial-gradient(ellipse 30% 29% at 79% 41%,#6751714a 0%,transparent 100%),linear-gradient(180deg,#211923 0%,#302332 40%,#19151f 100%)}
+.work-page::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:repeating-linear-gradient(115deg,#ffffff05 0 1px,transparent 1px 150px)}
+.work-page .gallery-grid{gap:45px 40px}
+.work-page .art-tile{position:relative;isolation:isolate;transition:transform .35s ease}
+.work-page .art-tile::before{content:"";position:absolute;z-index:-1;inset:-22px -24px 22%;border-radius:50%;background:radial-gradient(ellipse at center,#eab9b637 0%,#dfafcb10 47%,transparent 72%);filter:blur(23px);transition:filter .4s,opacity .4s;opacity:.86;pointer-events:none}
+.work-page .art-tile:hover{transform:translateY(-8px)}
+.work-page .art-tile:hover::before{filter:blur(18px);opacity:1.0}
+.work-page .art-image{border:1px solid #c0a2b05e;box-shadow:0 8px 13px #100b1399,0 28px 35px #09050b88,2px 3px 1px #f5dbdb1b;transition:box-shadow .4s}
+.work-page .art-tile:hover .art-image{box-shadow:0 13px 19px #100b13bf,0 35px 58px #09050bcc,0 0 28px #f2bac342}
+.exhibition-backdrop{background:radial-gradient(ellipse at 45% 35%,#533b50ef 0%,#19131df6 75%);backdrop-filter:blur(15px)}
+.exhibition-lightbox{max-width:min(1280px,94vw);gap:45px;grid-template-columns:minmax(0,1.35fr) minmax(230px,.65fr)}
+.exhibition-artwork{position:relative;display:grid;place-items:center;min-width:0}
+.exhibition-artwork::before{content:"";position:absolute;inset:3%;z-index:-1;filter:blur(42px);background:radial-gradient(ellipse,#fbc7cd64,transparent 70%)}
+.exhibition-artwork img{display:block;max-width:100%;max-height:82vh;object-fit:contain;border:1px solid #e3bdc333;box-shadow:0 22px 54px #060309cb,0 0 55px #f0b9c02f}
+.exhibition-lightbox .lightbox-caption .eyebrow{font-size:.65rem;color:#f5c1cf}
+.exhibition-lightbox .lightbox-caption h3{margin-top:15px}
+.exhibition-lightbox .lightbox-caption{padding:20px 20px 20px 0}
+@media(max-width:900px){.work-page .gallery-grid{gap:24px}.exhibition-lightbox{gap:18px}}
+@media(max-width:640px){
+ .opening-v2 .scroll-hint{left:50%;bottom:1.5%;transform:translateX(-50%);font-size:.61rem;white-space:nowrap;max-width:none}
+ .opening-v2 .reveal-caption .eyebrow{font-size:.72rem}
+ .opening-v2 .page-corner-note{top:8%;left:6%;font-size:.79rem}
+ .work-page .gallery-grid{gap:18px}
+ .work-page .art-tile::before{inset:-10px -8px 20%}
+ .about-page .about-copy h1.about-one-line{font-size:clamp(2.7rem,9vw,5rem)}
+ .exhibition-artwork img{max-height:58vh}
+ .exhibition-lightbox .lightbox-caption{padding:10px}
+ .sketch-section .sketch-photo .sketch-sticker{width:36%;right:-9%;top:-12%}
+}
+
+/* Legible artist signature in the navigation. */
+.site-nav .brand{font-size:2.08rem}
+.site-nav .brand-prefix{font-size:.8rem;letter-spacing:.005em;vertical-align:baseline;margin-right:4px;font-family:'DM Sans',sans-serif;font-weight:700}
+@media(max-width:900px){.site-nav .brand{font-size:1.55rem}.site-nav .brand-prefix{font-size:.68rem}}
+@media(max-width:640px){.site-nav .brand{font-size:1.25rem}.site-nav .brand-prefix{font-size:.58rem;margin-right:2px}.site-nav nav{gap:clamp(6px,1.6vw,12px)}.site-nav nav button{font-size:clamp(.5rem,1.7vw,.62rem)}}
+
+/* =====================================================
+   V6 — curated escapees, complete exhibition, and a
+   studio-wall-style Meet Anna page.
+   ===================================================== */
+.ambient-doodle.ink-color img{filter:drop-shadow(2px 4px 3px #12091770)}
+/* Keep edge doodles decorative, not on top of paintings or headings. */
+.featured .ambient-doodle{max-width:13vw}
+.closing-section .ambient-doodles{z-index:1}
+.closing-section>.eyebrow,.closing-section>h2,.closing-section>.scribble-button{position:relative;z-index:2}
+.sketch-section .open-sketchbook-cta{margin-top:18px;gap:24px}
+.sketch-section .open-sketchbook-cta span{font-size:1.1rem}
+.sketch-section .sketch-photo .sketch-sticker{width:27%;right:-7%;top:-11%;max-height:200px;object-fit:contain}
+/* The lightbox remains the exhibition's focal point, with a quiet day/UV switch. */
+.lightbox-lighting{margin:30px 0 22px}
+.lightbox-lighting>span{display:block;font-size:.67rem;letter-spacing:.16em;font-weight:700;text-transform:uppercase;color:#e8becb;margin-bottom:13px}
+.lightbox-lighting>div{display:inline-flex;gap:5px;background:#342a3a;padding:5px;border:1px solid #84667e;border-radius:30px}
+.lightbox-lighting button{padding:10px 16px;border:0;border-radius:24px;background:transparent;color:#fff1ed;font-weight:700;font-size:.78rem}
+.lightbox-lighting button.selected{background:#e6b1c3;color:#30202e}
+.lightbox-lighting button:hover:not(.selected){background:#69445e}
+/* Each art tile uses a real lightweight thumbnail; hovering lifts the whole canvas. */
+.work-page .art-image{background:radial-gradient(ellipse at 50% 34%,#644e63,#27202e)}
+.work-page .art-tile .tile-info{padding-top:12px}
+.work-page .art-image img{object-fit:contain}
+.work-page .art-image{aspect-ratio:4/5}
+.work-page .art-tile:nth-child(3n+2){margin-top:34px}
+.work-page .art-tile:nth-child(3n+3){margin-top:15px}
+/* The artist's studio wall: hand-layered photographs, not a generic card grid. */
+.about-studio-page{background:radial-gradient(ellipse at 85% 45%,#ead7d7 0%,#ece4d4 53%,#e9e0d1 100%);padding:148px 0 115px;min-height:900px}
+.about-studio-layout{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:5%;align-items:center;position:relative}
+.about-studio-layout .about-copy{position:relative;z-index:5;align-self:center;padding-bottom:40px}
+.about-studio-layout .about-copy h1.about-one-line{font-size:clamp(3.3rem,5.7vw,6.3rem);line-height:1;white-space:nowrap;margin:24px 0 30px}
+.about-studio-layout .about-copy>p:not(.eyebrow){max-width:440px}
+.studio-wall{position:relative;min-height:750px;width:100%;isolation:isolate;perspective:1600px}
+.studio-wall::before{content:'';position:absolute;inset:9% 2% 12% 0;transform:rotate(-3deg);background:linear-gradient(130deg,#c3acb54d,#f6e9db00 65%);filter:blur(28px);z-index:-1}
+.studio-card{margin:0;position:absolute;display:flex;flex-direction:column;gap:0;padding:10px 10px 28px;background:#faf2e7;color:#49313e;border:1px solid #bfaab361;box-shadow:8px 12px 2px #8d697637,0 19px 35px #392b3761;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.studio-card:hover{transform:rotate(0deg) translateY(-13px) scale(1.035);z-index:7;box-shadow:8px 14px 2px #8d69764a,0 30px 43px #392b3788}
+.studio-card img{display:block;width:100%;height:100%;object-fit:cover;min-height:0}
+.studio-card figcaption{font:700 .67rem/1.25 'DM Sans',sans-serif;letter-spacing:.03em;padding:10px 3px 0;min-height:25px}
+.studio-card figcaption span{color:#b65c84;font-size:1.12rem;float:right}
+.studio-main{width:55%;height:410px;top:2%;left:6%;transform:rotate(-7deg);z-index:2}
+.studio-process{width:37%;height:330px;top:7%;right:0%;transform:rotate(9deg);z-index:3}
+.studio-paint{width:40%;height:320px;left:0;bottom:2%;transform:rotate(5deg);z-index:4}
+.studio-wall-detail{width:50%;height:300px;right:2%;bottom:3%;transform:rotate(-6deg);z-index:3}
+.studio-handwriting{position:absolute;top:52%;right:4%;font:clamp(1.05rem,1.6vw,1.65rem)/1.35 'Permanent Marker',cursive;color:#9c5679;transform:rotate(-8deg);z-index:4;text-align:center;pointer-events:none}
+.about-studio-page .ambient-doodles{opacity:.7}
+@media(max-width:1000px){
+ .about-studio-layout{grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);gap:2%}
+ .studio-wall{min-height:690px}
+ .studio-main{height:370px}.studio-process{height:290px}
+ .studio-paint{height:275px}.studio-wall-detail{height:255px}
+ .about-studio-layout .about-copy h1.about-one-line{font-size:clamp(3rem,5.2vw,5.8rem)}
+}
+@media(max-width:750px){
+ .about-studio-page{padding:112px 0 72px;min-height:0}
+ .about-studio-layout{display:flex;flex-direction:column;align-items:stretch;gap:24px}
+ .about-studio-layout .about-copy{padding-bottom:0}
+ .about-studio-layout .about-copy h1.about-one-line{font-size:clamp(2.8rem,9vw,5.8rem)}
+ .studio-wall{min-height:680px;max-width:570px;margin:15px auto 0}
+ .studio-main{height:370px}.studio-process{height:285px}
+ .studio-paint{height:285px}.studio-wall-detail{height:260px}
+ .studio-handwriting{font-size:1.25rem}
+ .about-studio-page .ambient-doodles{opacity:.35}
+}
+@media(max-width:480px){
+ .studio-wall{min-height:540px}
+ .studio-card{padding:7px 7px 20px}
+ .studio-main{height:285px}.studio-process{height:223px}
+ .studio-paint{height:220px}.studio-wall-detail{height:200px}
+ .studio-card figcaption{font-size:.56rem;padding:6px 1px 0}
+ .studio-handwriting{font-size:1rem;top:54%;right:0}
+ .featured .ambient-doodle,.closing-section .ambient-doodle{max-width:26vw}
+ .work-page .art-image{aspect-ratio:3/4}
+}
+@media(prefers-reduced-motion:reduce){.studio-card{transition:none}.studio-card:hover{transform:none}}
+
+
+/* V7 — Anna's hand-picked homepage escape artists. */
+/* The pre-colored PNGs should retain their soft pencil hues, not be forced white. */
+.opening-v2 .hero-escapee-color{
+  filter:drop-shadow(2px 3px 3px #14091f80);
+}
+/* Let the larger pink heart-and-eye have the breathing room it deserves. */
+.opening-v2 .hero-escapee-eye{max-height:47svh}
+.opening-v2 .hero-escapee-shoe{max-height:25svh}
+.opening-v2 .hero-escapee-bug{max-height:15svh}
+.opening-v2 .hero-escapee-guitar{max-height:33svh}
+/* Large sketches look like faint pencil marks printed on the paper, not more stickers. */
+.sketch-section .ambient-doodle.is-atmospheric{
+  mix-blend-mode:multiply;
+  filter:none;
+}
+.sketch-section .ambient-doodle.is-atmospheric img{
+  filter:brightness(0);
+  animation:none;
+}
+/* Avoid colliding with the main illustration frame. */
+.sketch-section .sketch-layout{position:relative;z-index:3}
+@media(max-width:900px){
+  .sketch-section .ambient-doodle.is-atmospheric{max-width:32vw}
+}
+@media(max-width:640px){
+  /* Only the essential characters accompany the reveal on small screens. */
+  .opening-v2 .hero-escapee-guitar,.opening-v2 .hero-escapee-bug,
+  .opening-v2 .hero-escapee-shoe{display:none}
+  .opening-v2 .hero-escapee-eye{display:none}
+  .featured .ambient-doodle{max-width:21vw}
+  .sketch-section .ambient-doodle.is-atmospheric{max-width:36vw;opacity:.12!important}
+  .sketch-section .ambient-doodle:not(.is-atmospheric){max-width:16vw}
+  .closing-section .ambient-doodle{max-width:28vw}
+}
+@media(max-width:640px){
+  /* Keep the mouse and bee as a pair; the old V5 third-doodle hide rule was for a different roster. */
+  .sketch-section .ambient-doodle:nth-child(3){display:block}
+}

@@ -1,0 +1,30 @@
+Out of the Margins - V3 drop-in update
+=====================================
+
+You already have the React V2 site running. This update ZIP contains ONLY
+changed source files and new sketch PNG assets.
+
+1. Extract the update ZIP into the root of your local outofthemargins project.
+   Keep folder paths and allow overwriting App.tsx, HeroOpening.tsx, styles.css.
+   Existing art, Vite config, package.json and other files remain unchanged.
+2. From the project root:
+      npm run build
+      npm run dev
+3. Review Home, scroll the full page, About, and Work.
+4. When you're happy:
+      git add .
+      git commit -m "Add torn paper and escaping doodles across the site"
+      git push
+
+Where to add new cutouts:
+  public/sketches/your-drawing.png
+
+Where to make them appear:
+  src/escapees.ts
+
+Notes:
+- Uses Anna's real artwork, not generated substitute art.
+- No backend dependencies added; no npm install required if the V2 project already runs.
+- No animated doodle overlays appear on the dedicated Work/gallery page.
+- I tested React/TypeScript syntax and standalone desktop/mobile CSS previews.
+  A complete Vite build still needs to run locally (npm unavailable here).

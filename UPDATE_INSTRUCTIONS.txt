@@ -1,0 +1,12 @@
+OUT OF THE MARGINS — Hero V2 update
+
+1. Commit or back up your current local changes.
+2. Extract this ZIP over your existing repository root (the directory containing package.json). Allow the listed files to overwrite. Leave .git, package.json, and node_modules in place.
+3. Run: npm run build
+4. Run: npm run dev
+5. In your browser, scroll from top to see the page breakaway and Anna's character escape.
+6. When happy: git add . && git commit -m "Make Anna escape the margins" && git push
+
+Changed files: index.html, src/App.tsx, src/content.ts, src/styles.css.
+New files: src/HeroOpening.tsx, public/mascot-icon.png, public/sketches/*.png.
+Your gallery and About components are preserved.

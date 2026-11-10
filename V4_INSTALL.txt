@@ -1,0 +1,14 @@
+OUT OF THE MARGINS — V4 SKETCHBOOK UPDATE
+
+1. Unzip this archive into your existing V3 React project root.
+2. Allow replacing src/App.tsx; preserve all other existing files.
+3. Run npm run build and npm run dev.
+4. In your browser, choose Sketchbook in the navigation.
+5. Test the page-turning, page index, zoom, mobile layout and keyboard arrows.
+6. After review: git add . && git commit -m "Add interactive sketchbook" && git push
+
+New: src/Sketchbook.tsx, src/sketchbook.css, src/sketchbookPages.ts, public/book/*
+Updated: src/App.tsx
+
+10 curated full pages + 66 upright archive scans. No originals altered.
+No new npm dependencies.
