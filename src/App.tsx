@@ -51,7 +51,7 @@ function Work({onOpen}:{onOpen:(item:Artwork)=>void}) {
 function About({navigate}:{navigate:(page:Page)=>void}) {
   return <main className="about-page about-studio-page ambient-host"><EscapingDoodles items={aboutDoodles}/>
     <div className="section-inner about-layout about-studio-layout">
-      <div className="about-copy"><p className="eyebrow">The person behind the doodles</p><h1 className="about-one-line">Hi, I'm <em>Anna.</em></h1><p>{artist.introduction}</p><p>{artist.about}</p><p className="about-note">✳ These are temporary introduction words until Anna writes her own artist statement.</p><button className="scribble-button" onClick={()=>navigate('work')}>Explore the work <span>↗</span></button></div>
+      <div className="about-copy"><p className="eyebrow">The person behind the doodles</p><h1 className="about-one-line">Hi, I'm <em>Anna.</em></h1><p>{artist.introduction}</p><p>{artist.about}</p><p>{artist.closing}</p><button className="scribble-button" onClick={()=>navigate('work')}>Explore the work <span>↗</span></button></div>
       <div className="studio-wall" aria-label="Photographs of Anna creating art and examples of her work">
         <figure className="studio-card studio-main"><img src="/art/AnnaWorking2.webp" alt="Anna painting a colorful large face on a wall"/><figcaption>In her element <span>✳</span></figcaption></figure>
         <figure className="studio-card studio-process"><img src="/art/AnnaWorking.webp" alt="Anna working on a large mural"/><figcaption>Making something from nothing</figcaption></figure>
