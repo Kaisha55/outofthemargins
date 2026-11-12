@@ -56,7 +56,7 @@ function About({navigate}:{navigate:(page:Page)=>void}) {
         <figure className="studio-card studio-main"><img src="/art/AnnaWorking2.webp" alt="Anna painting a colorful large face on a wall"/><figcaption>In her element <span>✳</span></figcaption></figure>
         <figure className="studio-card studio-process"><img src="/art/AnnaWorking.webp" alt="Anna working on a large mural"/><figcaption>Making something from nothing</figcaption></figure>
         <figure className="studio-card studio-portrait"><img src="/art/AnnaProfile.jpg" alt="Portrait of Anna smiling at a restaurant"/><figcaption>Meet Anna <span>✳</span></figcaption></figure>
-        <span className="studio-handwriting">always making<br/>something ↗</span>
+        
       </div>
     </div>
   </main>
