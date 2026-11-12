@@ -22,8 +22,9 @@ export const artist = {
   title: 'Out of the Margins',
   byline: 'Art by Anna',
   tagline: 'Imagination has a habit of wandering off the page.',
-  introduction: 'A growing collection of paintings, sketchbook creatures, unexpected colors, and unfinished ideas worth keeping.',
-  about: 'I make art to follow ideas wherever they go. Sometimes they become paintings. Sometimes they stay as tiny creatures living in the margins of a sketchbook.',
+  introduction: "I've been making art for as long as I can remember. Drawing, painting, sculpting, experimenting with whatever materials I can get my hands on. There's almost always something I'm working on, and usually a few more ideas waiting their turn.",
+  about: "I love creating characters, exploring color, and seeing where an idea takes me. Sometimes that means a painting that covers an entire wall. Sometimes it's a strange little creature scribbled in the corner of a sketchbook. Other times, it's something made from clay, glass, metal, or whatever interesting junk I rescued from the trash.",
+  closing: "I don't really believe art has to fit into one category. I just like making things. And there's always more to make.",
   contactEmail: '',
   instagram: '',
 }
