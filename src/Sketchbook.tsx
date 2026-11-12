@@ -172,7 +172,7 @@ export default function Sketchbook() {
             <div className="book-cover-content">
               <div className="book-cover-kicker"><span>Out of the Margins</span><span>Art by Anna</span></div>
               <span className="book-cover-mark">✳</span><h2>the<br/><em>sketchbook</em></h2><p>Little worlds, big ideas, and everything in between.</p>
-              <img src="/sketches/feeling-good-cat.png" alt="" />
+              
               <button type="button" onClick={() => openBook()} className="book-cover-open">Open the book <span aria-hidden="true">↗</span></button>
             </div>
           </div>}
