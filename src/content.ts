@@ -56,7 +56,6 @@ export const art: Artwork[] = [
   {id:'woodburning-woman',title:'Woodburned Woman',category:'other',image:'/art/WoodBurning_Woman.jpg',alt:'Woodburned Woman by Anna',medium:'Woodburning'},
   {id:'sea-woman',title:'Sea Woman',category:'other',image:'/art/SeaWoman.webp',thumb:'/art/SeaWoman-thumb.webp',alt:'Brightly colored drawing of a woman surrounded by swirling shapes',medium:'Mixed media'},
   {id:'clouds',title:'Cloud Study',category:'painting',image:'/art/WomanInClouds.webp',thumb:'/art/WomanInClouds-thumb.webp',alt:'Dreamlike female figure set against mottled stormy colors',medium:'Painting'},
-  {id:'blown-vase-2',title:'Blown Glass Vase II',category:'other',image:'/art/BlownGlassVase2.jpg',alt:'Blown Glass Vase II by Anna',medium:'Blown glass'},
   {id:'purple-wall',title:'Flowers on Drywall',category:'mural',image:'/art/PurpleFlowers_drywall.webp',thumb:'/art/PurpleFlowers_drywall-thumb.webp',alt:'Purple and blue flowers painted on a dark wall',medium:'Wall painting'},
   {id:'woman-watercolor',title:'Watercolor Portrait',category:'other',image:'/art/WomanWatercolor.jpg',alt:'Watercolor Portrait by Anna',medium:'Watercolor'},
   {id:'blacklight-set',title:'The Glowing Collection',category:'blacklight',image:'/art/BlackLightWomenSet.webp',thumb:'/art/BlackLightWomenSet-thumb.webp',alt:'Three glowing blacklight silhouette paintings displayed side by side',medium:'Blacklight series'},
