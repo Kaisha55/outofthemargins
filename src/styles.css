@@ -373,3 +373,9 @@
   /* Keep the mouse and bee as a pair; the old V5 third-doodle hide rule was for a different roster. */
   .sketch-section .ambient-doodle:nth-child(3){display:block}
 }
+
+/* Meet Anna: two process photographs above a centered framed portrait. */
+.studio-portrait{width:54%;height:325px;left:23%;bottom:2%;transform:rotate(-3deg);z-index:5}
+@media(max-width:1000px){.studio-portrait{height:295px}}
+@media(max-width:750px){.studio-portrait{height:300px}}
+@media(max-width:480px){.studio-portrait{height:235px}}
