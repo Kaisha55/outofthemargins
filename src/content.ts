@@ -58,7 +58,6 @@ export const art: Artwork[] = [
   {id:'clouds',title:'Cloud Study',category:'painting',image:'/art/WomanInClouds.webp',thumb:'/art/WomanInClouds-thumb.webp',alt:'Dreamlike female figure set against mottled stormy colors',medium:'Painting'},
   {id:'purple-wall',title:'Flowers on Drywall',category:'mural',image:'/art/PurpleFlowers_drywall.webp',thumb:'/art/PurpleFlowers_drywall-thumb.webp',alt:'Purple and blue flowers painted on a dark wall',medium:'Wall painting'},
   {id:'woman-watercolor',title:'Watercolor Portrait',category:'other',image:'/art/WomanWatercolor.jpg',alt:'Watercolor Portrait by Anna',medium:'Watercolor'},
-  {id:'blacklight-set',title:'The Glowing Collection',category:'blacklight',image:'/art/BlackLightWomenSet.webp',thumb:'/art/BlackLightWomenSet-thumb.webp',alt:'Three glowing blacklight silhouette paintings displayed side by side',medium:'Blacklight series'},
   {id:'green-red',title:'Color & Feeling',category:'painting',image:'/art/WomanGreenRed.webp',thumb:'/art/WomanGreenRed-thumb.webp',alt:'Portrait surrounded by green, rust and earth-toned marks',medium:'Painting'},
   {id:'melting-duck',title:'Melting Duck',category:'painting',image:'/art/MeltingDuckPaintingOnCabinet.jpg',alt:'Melting Duck by Anna',medium:'Furniture painting'},
   {id:'horned',title:'The Girl Who Escaped',category:'other',image:'/art/HornedGirl._trans.webp',thumb:'/art/HornedGirl._trans-thumb.webp',alt:'Anna’s smiling illustrated girl with pink horns',medium:'Character illustration'},
