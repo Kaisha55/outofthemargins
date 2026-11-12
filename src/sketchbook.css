@@ -38,7 +38,7 @@
 .book-cover-mark{font-size:3.8rem;color:#e2a6b2;line-height:1;margin:8% 0 0}
 .book-cover-content h2{font-size:clamp(2.4rem,4vw,5rem);line-height:.95;margin:4% 0 0}
 .book-cover-content h2 em{color:#ffc1ba}
-.book-cover-content>p{font-size:.91rem;max-width:270px;line-height:1.5;margin:5% 0}
+.book-cover-content>p{font-size:clamp(1.05rem,1.4vw,1.28rem);max-width:340px;line-height:1.45;margin:5% 0}
 .book-cover-content>img{position:absolute;width:36%;max-height:45%;bottom:15%;right:-2%;object-fit:contain;filter:brightness(0) invert(1);opacity:.42;transform:rotate(12deg)}
 .book-cover-open{position:relative;margin-top:auto;background:#f6e6d7;color:#542b41;border:0;padding:14px 20px;font-size:.85rem;font-weight:700;z-index:2;box-shadow:5px 5px #24101d47;cursor:pointer}
 .book-cover-open span{margin-left:22px}
