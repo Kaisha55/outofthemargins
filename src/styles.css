@@ -379,3 +379,7 @@
 @media(max-width:1000px){.studio-portrait{height:295px}}
 @media(max-width:750px){.studio-portrait{height:300px}}
 @media(max-width:480px){.studio-portrait{height:235px}}
+
+/* Pre-Ann polish: keep the gallery accents clear of navigation and artwork. */
+.featured .ambient-doodle:nth-child(3) img{filter:hue-rotate(165deg) saturate(1.3) drop-shadow(2px 4px 3px #12091770)}
+.sketch-section .sketch-photo .sketch-sticker{top:-27%;right:-13%;width:25%;max-height:230px}
