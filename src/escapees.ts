@@ -40,7 +40,7 @@ export const homeDoodles: Record<'featured'|'sketch'|'closing',DoodlePlacement[]
     {id:'sketch-lab-mouse',src:'/book/cutouts/cutout-lab-mouse-trans.png',left:'11%',bottom:'4%',width:'clamp(90px,9vw,130px)',angle:'8deg',tone:'dark',delay:240,opacity:.80},
   ],
   closing: [
-    {id:'closing-waving-girl',src:'/home-characters/closing-waving-girl-pink.png',left:'3%',bottom:'-1%',width:'clamp(164px,18vw,260px)',angle:'-7deg',tone:'color',opacity:.96},
+    {id:'closing-power-woman',src:'/book/cutouts/v6-cut-out-power-woman-trans.png',left:'2%',bottom:'-1%',width:'clamp(180px,19vw,275px)',angle:'-5deg',tone:'light',opacity:.92},
   ],
 }
 
